@@ -34,37 +34,40 @@ export const Table = ({columns, bodyTable, openModal= false, openModalChange, st
     <div className='iptab-container'>
       {isLoading && <Loading/>}
       <table className='table-container'>
+        <thead>
           <tr className='headeriplist-container'>
             {
-            columns.map((column) => (
-              <th className='headertitle'>{column.title}</th>
+            columns.map((column, index1) => (
+              <th className='headertitle' key={index1} >{column.title}</th>
               ))
             }
           </tr>
-
-          {displayedItems && displayedItems.map((e: any)=> (
-            <tr className='row-container'>
-            <td>{e.id}</td>
-            <td>{e.country}</td>
-            <td>{e.isoCode}</td>
-            <td>{e.currency}</td>
-            <td>{e.ip}</td>
-            <td>
-              <img src={e.flag} alt={e.country} width={50} height={30} />
-            </td>
-            <td>{e.status}</td>
-            <td>
-              <button onClick={()=>openModalChange(e.status, e.ip)} className='status-button'>
-                {statusTextButton}
-              </button>
-            </td>
-            <td>
-              <button onClick={()=>openModalChange('Eliminar', e.ip)} className='status-button button-delete'>
-                {deleteTextButton}
-              </button>
-            </td>
-          </tr>
-          ))}
+        </thead>
+        <tbody>
+            {displayedItems && displayedItems.map((e: any, index: any)=> (
+              <tr className='row-container' key={index}>
+                <td>{e.id}</td>
+                <td>{e.country}</td>
+                <td>{e.isoCode}</td>
+                <td>{e.currency}</td>
+                <td>{e.ip}</td>
+                <td>
+                  <img src={e.flag} alt={e.country} width={50} height={30} />
+                </td>
+                <td>{e.status}</td>
+                <td>
+                  <button onClick={()=>openModalChange(e.status, e.ip)} className='status-button'>
+                    {statusTextButton}
+                  </button>
+                </td>
+                <td>
+                  <button onClick={()=>openModalChange('Eliminar', e.ip)} className='status-button button-delete'>
+                    {deleteTextButton}
+                  </button>
+                </td>
+            </tr>
+            ))}
+        </tbody>
       </table>
       {
         openNotificacion && (
