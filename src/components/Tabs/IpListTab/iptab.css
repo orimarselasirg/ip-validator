@@ -1,0 +1,35 @@
+.iptab-container {
+  /* background-color: red; */
+  width: 93.5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.table-container{
+  margin-top:  20px;
+}
+.headeriplist-container{
+  height: 45px;
+  /* background-color: aqua; */
+  /* width: 100vw; */
+  color: rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 14px;
+}
+
+.headertitle{
+  width: 200px;
+  text-align: center;
+  border-bottom: 3px #80808024 solid;
+}
+
+.row-container{
+  height: 50px;
+  /* background-color: blueviolet; */
+  text-align: center;
+  border-bottom: 1px #80808024 solid;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.7);
+ 
+}

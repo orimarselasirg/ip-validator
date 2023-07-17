@@ -1,0 +1,22 @@
+.tab-item {
+  width: 20em;
+  /* background-color: rgb(234, 234, 234); */
+  background-color: #E2E2E2;
+  /* background-color: white; */
+  color: grey;
+  text-align: center;
+  font-weight: bold
+}
+
+.tab-item .nav-link{
+  background-color: red;
+}
+
+.tabs-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-content: center;
+  align-items: center;
+  /* background-color: #EBEBEB; */
+}
